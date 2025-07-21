@@ -7,11 +7,13 @@ Game rắn săn mồi hai người chơi trên cùng màn hình với đồ họ
 ### 🎮 Chơi Game Cơ Bản
 
 - **2 Người Chơi**: Mỗi người điều khiển rắn riêng trên cùng bàn cờ
+- **Đặt Tên Player**: Nhập tên cho cả hai người chơi trước khi bắt đầu
 - **Điều Khiển Riêng Biệt**:
   - Player 1 (Rắn Xanh): Phím mũi tên
   - Player 2 (Rắn Xanh Dương): Phím WASD
 - **Hệ Thống Điểm**: Ăn thức ăn +10 điểm, power-up +5 điểm
 - **Thắng/Thua**: Rắn sống sót lâu nhất hoặc có điểm cao nhất thắng
+- **Ghi Tỷ Số**: Theo dõi số ván thắng của mỗi người chơi, thắng ván +1
 
 ### ✨ Tính Năng Nâng Cao
 
@@ -60,21 +62,34 @@ python snake_game.py
 ### Điều Khiển Chung
 
 - **R**: Chơi lại (khi game over)
+- **N**: Sửa tên player (khi game over)
+- **C**: Reset tỷ số thắng/thua (bất cứ lúc nào)
 - **Q**: Thoát game
+
+### Điều Khiển Nhập Tên
+
+- **Enter**: Xác nhận tên hiện tại
+- **Tab**: Chuyển sang player tiếp theo
+- **Space**: Bắt đầu game với tên hiện tại
+- **C**: Reset tỷ số thắng/thua
+- **Backspace**: Xóa ký tự
+- **ESC**: Bắt đầu với tên mặc định / Quay lại
 
 ## Cách Chơi
 
-1. **Mục Tiêu**: Sống sót lâu hơn đối thủ và ghi nhiều điểm
-2. **Ăn Thức Ăn**: Ô đỏ cho 10 điểm và làm rắn lớn lên
-3. **Nhặt Power-ups**: Các ô màu cho lợi thế tạm thời:
+1. **Nhập Tên**: Đặt tên cho cả hai player trước khi bắt đầu
+2. **Mục Tiêu**: Sống sót lâu hơn đối thủ và ghi nhiều điểm
+3. **Ăn Thức Ăn**: Ô đỏ cho 10 điểm và làm rắn lớn lên
+4. **Nhặt Power-ups**: Các ô màu cho lợi thế tạm thời:
    - Xanh dương = Tăng tốc 3 giây
    - Tím = Tăng 2 đốt ngay
    - Cam = Giảm 2 đốt của đối thủ
-4. **Tránh Va Chạm**: Không đâm vào chướng ngại vật, chính mình, hoặc đối thủ
-5. **Điều Kiện Thắng**:
+5. **Tránh Va Chạm**: Không đâm vào chướng ngại vật, chính mình, hoặc đối thủ
+6. **Điều Kiện Thắng**:
    - Rắn sống sót cuối cùng thắng
    - Nếu cả hai chết cùng lúc, điểm cao hơn thắng
    - Hòa nếu cùng điểm khi cả hai chết
+7. **Tỷ Số Tổng**: Mỗi ván thắng tích lũy +1 win, hiển thị trên màn hình
 
 ## Cơ Chế Game
 
@@ -88,9 +103,15 @@ python snake_game.py
 
 ### Hệ Thống Điểm
 
-- **Thức Ăn**: 10 điểm mỗi ô đỏ
-- **Power-ups**: 5 điểm bonus mỗi vật phẩm
+- **Thức Ăn**: 10 điểm mỗi ô đỏ (điểm trong ván)
+- **Power-ups**: 5 điểm bonus mỗi vật phẩm (điểm trong ván)
 - **Thưởng Sống Sót**: Là rắn cuối cùng sống sót thường quyết định thắng thua
+
+### Hệ Thống Tỷ Số
+
+- **Thắng Ván**: +1 win cho người thắng (hiển thị tích lũy)
+- **Hòa**: Không ai được cộng win
+- **Reset**: Có thể reset tỷ số về 0-0 bằng phím C
 
 ### Hiệu Ứng Power-up
 
@@ -108,6 +129,8 @@ python snake_game.py
 
 ## Chi Tiết Kỹ Thuật
 
+- **Giao Diện Tương Tác**: Màn hình nhập tên với text input thực tế
+- **Quản Lý Trạng Thái**: Chuyển đổi giữa name input, playing, game over
 - **Di Chuyển Lưới**: Hệ thống lưới 20x20 pixel
 - **Hoạt Hình Mượt**: 60 FPS
 - **Sinh Ngẫu Nhiên**: Chướng ngại vật và power-up xuất hiện ngẫu nhiên
