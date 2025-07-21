@@ -1,150 +1,150 @@
-# Snake Game 2 Người
+# Snake Game 2 Players
 
-Game rắn săn mồi hai người chơi trên cùng màn hình với đồ họa PyGame!
+A two-player snake hunting game on the same screen with PyGame graphics!
 
-## Tính Năng
+## Features
 
-### 🎮 Chơi Game Cơ Bản
+### 🎮 Basic Gameplay
 
-- **2 Người Chơi**: Mỗi người điều khiển rắn riêng trên cùng bàn cờ
-- **Đặt Tên Player**: Nhập tên cho cả hai người chơi trước khi bắt đầu
-- **Điều Khiển Riêng Biệt**:
-  - Player 1 (Rắn Xanh): Phím mũi tên
-  - Player 2 (Rắn Xanh Dương): Phím WASD
-- **Hệ Thống Điểm**: Ăn thức ăn +10 điểm, power-up +5 điểm
-- **Thắng/Thua**: Rắn sống sót lâu nhất hoặc có điểm cao nhất thắng
-- **Ghi Tỷ Số**: Theo dõi số ván thắng của mỗi người chơi, thắng ván +1
+- **2 Players**: Each player controls their own snake on the same board
+- **Player Naming**: Enter names for both players before starting
+- **Separate Controls**:
+  - Player 1 (Green Snake): Arrow keys
+  - Player 2 (Blue Snake): WASD keys
+- **Scoring System**: Food +10 points, power-up +5 points
+- **Win/Lose**: Snake that survives longest or has highest score wins
+- **Score Tracking**: Keep track of wins for each player, +1 win per victory
 
-### ✨ Tính Năng Nâng Cao
+### ✨ Advanced Features
 
-- **Xuyên Tường**: Chạm tường sẽ xuất hiện ở phía đối diện (không chết)
-- **Power-ups**: Ba loại vật phẩm đặc biệt:
-  - 🟦 **Speed Boost** (Xanh dương): Tăng tốc độ 3 giây
-  - 🟣 **Grow** (Tím): Tăng 2 đốt ngay lập tức
-  - 🟠 **Shrink Enemy** (Cam): Giảm 2 đốt của đối thủ
-- **Chướng Ngại Vật**: Khối xám ngẫu nhiên tạo thử thách
-- **Hiệu Ứng Tốc Độ**: Rắn phát sáng khi có speed boost
+- **Wall Wrapping**: Touching walls makes you appear on the opposite side (no death)
+- **Power-ups**: Three types of special items:
+  - 🟦 **Speed Boost** (Blue): Increase speed for 3 seconds
+  - 🟣 **Grow** (Purple): Instantly add 2 segments
+  - 🟠 **Shrink Enemy** (Orange): Remove 2 segments from opponent
+- **Obstacles**: Random gray blocks create challenges
+- **Speed Effects**: Snake glows when speed boosted
 
-## Cài Đặt
+## Installation
 
-1. **Cài Python** (3.7 trở lên)
-2. **Cài PyGame**:
+1. **Install Python** (3.7 or higher)
+2. **Install PyGame**:
    ```bash
    pip install -r requirements.txt
    ```
-   Hoặc thủ công:
+   Or manually:
    ```bash
    pip install pygame==2.5.2
    ```
 
-## Chạy Game
+## Running the Game
 
 ```bash
-python snake_game.py
+python main.py
 ```
 
-## Điều Khiển
+## Controls
 
-### Player 1 (Rắn Xanh)
+### Player 1 (Green Snake)
 
-- **↑**: Di chuyển lên
-- **↓**: Di chuyển xuống
-- **←**: Di chuyển trái
-- **→**: Di chuyển phải
+- **↑**: Move up
+- **↓**: Move down
+- **←**: Move left
+- **→**: Move right
 
-### Player 2 (Rắn Xanh Dương)
+### Player 2 (Blue Snake)
 
-- **W**: Di chuyển lên
-- **S**: Di chuyển xuống
-- **A**: Di chuyển trái
-- **D**: Di chuyển phải
+- **W**: Move up
+- **S**: Move down
+- **A**: Move left
+- **D**: Move right
 
-### Điều Khiển Chung
+### General Controls
 
-- **R**: Chơi lại (khi game over)
-- **N**: Sửa tên player (khi game over)
-- **C**: Reset tỷ số thắng/thua (bất cứ lúc nào)
-- **Q**: Thoát game
+- **R**: Restart game (when game over)
+- **N**: Edit player names (when game over)
+- **C**: Reset win/loss score (anytime)
+- **Q**: Quit game
 
-### Điều Khiển Nhập Tên
+### Name Input Controls
 
-- **Enter**: Xác nhận tên hiện tại
-- **Tab**: Chuyển sang player tiếp theo
-- **Space**: Bắt đầu game với tên hiện tại
-- **C**: Reset tỷ số thắng/thua
-- **Backspace**: Xóa ký tự
-- **ESC**: Bắt đầu với tên mặc định / Quay lại
+- **Enter**: Confirm current name
+- **Tab**: Switch to next player
+- **Space**: Start game with current names
+- **C**: Reset win/loss score
+- **Backspace**: Delete character
+- **ESC**: Start with default names / Go back
 
-## Cách Chơi
+## How to Play
 
-1. **Nhập Tên**: Đặt tên cho cả hai player trước khi bắt đầu
-2. **Mục Tiêu**: Sống sót lâu hơn đối thủ và ghi nhiều điểm
-3. **Ăn Thức Ăn**: Ô đỏ cho 10 điểm và làm rắn lớn lên
-4. **Nhặt Power-ups**: Các ô màu cho lợi thế tạm thời:
-   - Xanh dương = Tăng tốc 3 giây
-   - Tím = Tăng 2 đốt ngay
-   - Cam = Giảm 2 đốt của đối thủ
-5. **Tránh Va Chạm**: Không đâm vào chướng ngại vật, chính mình, hoặc đối thủ
-6. **Điều Kiện Thắng**:
-   - Rắn sống sót cuối cùng thắng
-   - Nếu cả hai chết cùng lúc, điểm cao hơn thắng
-   - Hòa nếu cùng điểm khi cả hai chết
-7. **Tỷ Số Tổng**: Mỗi ván thắng tích lũy +1 win, hiển thị trên màn hình
+1. **Enter Names**: Set names for both players before starting
+2. **Objective**: Survive longer than your opponent and score more points
+3. **Eat Food**: Red squares give 10 points and make your snake grow
+4. **Collect Power-ups**: Colored squares provide temporary advantages:
+   - Blue = Speed boost for 3 seconds
+   - Purple = Instantly add 2 segments
+   - Orange = Remove 2 segments from opponent
+5. **Avoid Collisions**: Don't hit obstacles, yourself, or your opponent
+6. **Win Conditions**:
+   - Last surviving snake wins
+   - If both die simultaneously, higher score wins
+   - Tie if same score when both die
+7. **Overall Score**: Each victory accumulates +1 win, displayed on screen
 
-## Cơ Chế Game
+## Game Mechanics
 
-### Hệ Thống Va Chạm
+### Collision System
 
-- **Xuyên Tường**: Chạm rìa màn hình → xuất hiện phía đối diện (không chết)
-- **Tự Đâm**: Đâm vào thân mình → chết
-- **Đâm Nhau**: Đâm vào thân đối thủ → chết
-- **Đầu-Đầu**: Hai đầu va nhau → cả hai chết
-- **Chướng Ngại Vật**: Đâm vào khối xám → chết
+- **Wall Wrapping**: Touch screen edge → appear on opposite side (no death)
+- **Self Collision**: Hit your own body → death
+- **Player Collision**: Hit opponent's body → death
+- **Head-to-Head**: Two heads collide → both die
+- **Obstacles**: Hit gray blocks → death
 
-### Hệ Thống Điểm
+### Scoring System
 
-- **Thức Ăn**: 10 điểm mỗi ô đỏ (điểm trong ván)
-- **Power-ups**: 5 điểm bonus mỗi vật phẩm (điểm trong ván)
-- **Thưởng Sống Sót**: Là rắn cuối cùng sống sót thường quyết định thắng thua
+- **Food**: 10 points per red square (round score)
+- **Power-ups**: 5 bonus points per item (round score)
+- **Survival Bonus**: Being the last snake alive usually determines winner
 
-### Hệ Thống Tỷ Số
+### Score Tracking
 
-- **Thắng Ván**: +1 win cho người thắng (hiển thị tích lũy)
-- **Hòa**: Không ai được cộng win
-- **Reset**: Có thể reset tỷ số về 0-0 bằng phím C
+- **Round Win**: +1 win for victor (cumulative display)
+- **Tie**: No one gets win point
+- **Reset**: Can reset score to 0-0 with C key
 
-### Hiệu Ứng Power-up
+### Power-up Effects
 
-- **Speed Boost**: Tăng đôi tốc độ trong 3 giây (hiệu ứng phát sáng)
-- **Grow**: Tăng ngay 2 đốt thân
-- **Shrink Enemy**: Giảm tối đa 2 đốt của đối thủ (không giết chết)
+- **Speed Boost**: Double speed for 3 seconds (glowing effect)
+- **Grow**: Instantly add 2 body segments
+- **Shrink Enemy**: Remove up to 2 segments from opponent (won't kill)
 
-## Chiến Thuật
+## Strategy
 
-1. **Kiểm Soát Trung Tâm**: Vị trí giữa có nhiều lối thoát hơn
-2. **Sử Dụng Power-ups Khôn Ngoan**: Speed boost giúp thoát khỏi tình huống nguy hiểm
-3. **Chặn Đường Đối Thủ**: Dùng thân mình để hạn chế di chuyển của đối thủ
-4. **Tránh Va Chạm Trực Diện**: Không lao vào nhau trực tiếp
-5. **Khai Thác Xuyên Tường**: Sử dụng tính năng wrap-around để tấn công bất ngờ
+1. **Control the Center**: Middle positions have more escape routes
+2. **Use Power-ups Wisely**: Speed boost helps escape dangerous situations
+3. **Block Opponent**: Use your body to limit opponent's movement
+4. **Avoid Head-on Collisions**: Don't charge directly at each other
+5. **Exploit Wall Wrapping**: Use wrap-around feature for surprise attacks
 
-## Chi Tiết Kỹ Thuật
+## Technical Details
 
-- **Giao Diện Tương Tác**: Màn hình nhập tên với text input thực tế
-- **Quản Lý Trạng Thái**: Chuyển đổi giữa name input, playing, game over
-- **Di Chuyển Lưới**: Hệ thống lưới 20x20 pixel
-- **Hoạt Hình Mượt**: 60 FPS
-- **Sinh Ngẫu Nhiên**: Chướng ngại vật và power-up xuất hiện ngẫu nhiên
-- **Điều Khiển Thời Gian Thực**: Xử lý input liên tục
-- **Tối Ưu Va Chạm**: Kiểm tra va chạm dựa trên vị trí hiệu quả
+- **Interactive Interface**: Name input screen with real text input
+- **State Management**: Transitions between name input, playing, game over
+- **Grid Movement**: 20x20 pixel grid system
+- **Smooth Animation**: 60 FPS
+- **Random Generation**: Obstacles and power-ups spawn randomly
+- **Real-time Controls**: Continuous input processing
+- **Collision Optimization**: Efficient position-based collision detection
 
-## Tùy Chỉnh
+## Customization
 
-Có thể chỉnh sửa các hằng số trong `snake_game.py`:
+You can modify constants in the game files:
 
-- `WINDOW_WIDTH/HEIGHT`: Thay đổi kích thước bàn cờ
-- `GRID_SIZE`: Điều chỉnh độ chi tiết di chuyển
-- `base_speed`: Sửa tốc độ rắn cơ bản (số nhỏ hơn = nhanh hơn)
-- `powerup_spawn_interval`: Kiểm soát tần suất power-up
-- Màu sắc và hiệu ứng có thể tùy chỉnh trong phần color constants
+- `WINDOW_WIDTH/HEIGHT`: Change board size
+- `GRID_SIZE`: Adjust movement granularity
+- `base_speed`: Modify base snake speed (smaller number = faster)
+- `powerup_spawn_interval`: Control power-up frequency
+- Colors and effects can be customized in the color constants section
 
-Chúc bạn chơi vui vẻ! 🐍🎮
+Have fun playing! 🐍🎮
