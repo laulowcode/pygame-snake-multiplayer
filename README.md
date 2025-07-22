@@ -2,6 +2,9 @@
 
 A two-player snake hunting game on the same screen with PyGame graphics!
 
+![Game Screenshot](images/gameplay.png)
+_Two players competing in an intense snake battle with power-ups and obstacles_
+
 ## Features
 
 ### 🎮 Basic Gameplay
@@ -24,6 +27,9 @@ A two-player snake hunting game on the same screen with PyGame graphics!
   - 🟠 **Shrink Enemy** (Orange): Remove 2 segments from opponent
 - **Obstacles**: Random gray blocks create challenges
 - **Speed Effects**: Snake glows when speed boosted
+
+![Power-ups and Features](images/features.png)
+_Different power-ups: Speed Boost (Blue), Grow (Purple), Shrink Enemy (Orange), plus obstacles_
 
 ## Installation
 
